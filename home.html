@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Raizen</title>
+        <link rel="stylesheet" href="assets/css/homeStyle.css">
+        <script defer src="assets/Js/home.js"></script>
+    </head>
+    <body onload="mostrarTutores()">
+        <!-----------------------------CABEÇALHO---------------------------------->
+        <div id="home" class="headerContainer">
+            <div class="headerContainerInterno">
+                <div class="marca">
+                    <div class="universidade">
+                        <span>UNIVERSIDADE</span>
+                        <img class="raizen" src="assets/images/imgRaizen.jpg">
+                    </div>
+                    <img class="logoBranca" src="assets/images/logoRaizenBranco.jpg">
+                </div>
+                <div class="notificacao">
+                    <div class="perfilMenu">
+                        <div class="nomeDisHeader">NOME DO DISSEMINADOR</div>
+                        <img class="setaBaixo" src="./assets/images/setaBaixo.svg">
+                        <!--Menu oculto-->
+                        <div class="menu">
+                            <a href="#home">
+                                <label class="inicio">
+                                    <img src="/assets/images/casa.svg">
+                                    <div>INÍCIO</div>
+                                </label>
+                            </a>
+                            <a href="#proximosEncontros">    
+                                <label class="proximosEncontros">
+                                    <img src="/assets/images/local.svg">
+                                    <div>PRÓXIMOS ENCONTROS</div>
+                                </label>
+                            </a>
+                            <a href="#proximosEncontros">
+                                <label class="irAgenda">
+                                    <img src="/assets/images/calendario.svg">
+                                    <div>MINHA AGENDA</div>
+                                </label>
+                            </a>
+                            <a href="/index.html">
+                                <label class="sair">
+                                    <img src="/assets/images/sair.svg">
+                                    <div>SAIR</div>
+                                </label>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="alerta">
+                        <img class="imgSino" src="./assets/images/sino.jpg">
+                        <div class="quantidade">5</div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <!---------------BOX DE APRESENTAÇÃO DOS ENCONTROS PRÓXIMOS/ANTIGOS---------------------->
+        <div class="container">
+            <div class="containerAlinhamento">
+                <div id="proximosEncontros" class="tituloProximo">PRÓXIMO ENCONTRO</div>
+                <div class="containerBody">
+                    <div class="containerEncontros">
+                        <div class="encontros">
+                            <div class="atual">
+                                <div class="data">
+                                    <div class="mes">JUN</div>
+                                    <div class="dia">16</div>
+                                    <div class="hora">14:00</div>
+                                </div>
+                                <div class="perfilEncontro">
+                                    <div class="perfilEncontro">
+                                        <div class="imagesPerfil">
+                                            <img  class="fotoPerfil" src="/assets/images/fotoPerfil.png">
+                                            <img class="adicionar"src="/assets/images/mais.svg">
+                                        </div>
+                                        <span class="nomeDis">NOME DO</span>
+                                        <span class="sobreNomeDis">DISSEMINADOR</span>
+                                        <div class="areaDis">#RH #Comportamento #Pessoas</div>
+                                    </div>
+                                </div>
+                                <button class="btnLink">LINK DA REUNIÃO</button>
+                            </div>
+                            <!--Área dos encontros antigos-->
+                            <div class="antigos">
+                                <div class="titulo">ECONTROS ANTIGOS</div>
+                                <div class="dadosAntigos">
+                                    <div class="dataAntiga">
+                                        <div class="mesAntigo">jun</div>
+                                        <div class="diaAntigo">16</div>
+                                        <div class="horaAntigo">09:00</div>
+                                    </div>
+                                    <div class="perfilEncontroAntigo">
+                                        <div class="nomeTutor">Nome-Tutor</div>
+                                        <div class="nomeDisAntigo">Nome do Disseminador</div>
+                                    </div>
+                                    <img id="avancar" src="assets/images/setaDireita.svg">
+                                </div>
+                                <div class="dadosAntigos">
+                                    <div class="dataAntiga">
+                                        <div class="mesAntigo">jun</div>
+                                        <div class="diaAntigo">08</div>
+                                        <div class="horaAntigo">09:00</div>
+                                    </div>
+                                    <div class="perfilEncontroAntigo">
+                                        <div class="nomeTutor">Nome-Tutor</div>
+                                        <div class="nomeDisAntigo">Nome do Disseminador</div>
+                                    </div>
+                                    <img id="avancar" src="assets/images/setaDireita.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------------------CAMPO DE PESQUISA--------------------------->
+                    <div class="pesquisa">
+                        <div class="duvida">O QUE VOCÊ QUER SABER?</div>
+                        <img id="lupa" src="/assets/images/lupa.svg">
+                        <input type="text" placeholder="Pesquisar">
+                    </div>
+                    <!------------------------BOX DE APRESENTAÇÃO DOS TUTORES-------------------->
+                    <div class="tutores">
+                    </div>
+                    <button class="btnCarregarMais" onclick="carregarMais()">CARREGAR MAIS</button>
+                </div>
+            </div>  
+        </div>  
+        <!---------------------------------RODAPÉ DA PÁGINA HOME--------------------------------->
+        <footer>
+            <span>2020 © Todos os direitos reservados - teya.us</span>
+        </footer>
+        <!---------------------------------JANELA OCULTA PARA AGENDAR---------------------------->
+        <div class="containerAgenda">
+            <div class="fechar" id= "agendar">
+                <img src="/assets/images/fechar.svg">
+            </div>
+            <div class="containerCentral">
+                <div class="tituloAgenda" >AGENDE SEU ENCONTRO</div>
+                <div class="containerInfo">
+                    <div class="perfil">
+                        <img id="fotoAgenda" src="assets/images/fotoPerfil.png">
+                        <div class="conecte">CONECTE</div>
+                        <a id="wpp">
+                            <img src="/assets/images/whatsapp.svg">
+                        </a>
+                        <a id="email">
+                            <img src="/assets/images/email.svg">
+                        </a>
+                        <a id="linkedin">
+                            <img src="/assets/images/linkedin.svg">
+                        </a>
+                    </div>
+                    <div class="descricao">
+                        <div class="idAgenda">
+                            <div>
+                                <div class="nomeId">NOME DO</div>
+                                <div class="sobreNomeId">DISSEMINADOR</div>
+                            </div>
+                            <div class="avaliacao">
+                                <img src="assets/images/estrela.svg" class="favoritoTutorLista">
+                                <div class="notaTutorLista">4,8</div>
+                            </div>
+                        </div>
+                        <div class="areaAgenda">#RH #Comportamento #Pessoas</div>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed velit dignissim sodales. Sed adipiscing diam donec adipiscing.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed velit dignissim sodales. Sed adipiscing diam donec adipiscing.'</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed velit dignissim sodales. Sed adipiscing diam donec adipiscing.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed velit dignissim sodales. Sed adipiscing diam donec adipiscing.</p>
+                        </div>
+                    </div>
+                    <div class="agenda">
+                        <div class="minhaAgenda">
+                            <img src="assets/images/imgCalendario.png">
+                        </div>
+                        <div class="diaHora">
+                            <div class="selecaoDia">22/12/2020</div>
+                            <div class="tituloHorario">HORÁRIOS DISPONÍVEIS</div>
+                            <div class="horarios">
+                                <div class="horaAg">09:00</div>
+                                <div class="horaAg">09:30</div>
+                                <div class="horaAg">10:00</div>
+                                <div class="horaAg">10:30</div>
+                                <div class="horaAg">11:00</div>
+                                <div class="horaAg">11:30</div>
+                                <div class="horaAg">12:00</div>
+                            </div>
+                        </div>
+                        <div class="campoBtnAgendar">
+                            <button id="btnAgendar">AGENDAR ENCONTRO</button>
+                        </div>
+                        <div class="agendado">Dia 22/12/2020 das 09:00 até 10:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

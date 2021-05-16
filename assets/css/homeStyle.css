@@ -1,0 +1,1881 @@
+/* ---------------FONTES--------------- */
+@font-face {
+    font-family:DINPro;
+    src: url(../fonts/DINPro.ttf);
+}
+
+@font-face {
+    font-family: DINProMedium;
+    src: url(../fonts/DINPro-Medium.ttf);
+}
+
+@font-face {
+    font-family: DINProBold;
+    src: url(../fonts/DINPro-Bold.ttf);
+}
+
+@font-face {
+    font-family: DINProLight;
+    src: url(../fonts/DINPro-Light.ttf);
+}
+
+@font-face {
+    font-family: DINProBlack;
+    src: url(../fonts/DINPro-Black.ttf);
+}
+
+
+/*======================================DESKTOP================================================*/
+
+*{
+    box-sizing: border-box;
+    font-family: DINPro;
+}
+
+body{
+    min-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 0;
+}
+
+.headerContainer {
+    display: flex;
+    width: 100%;
+    height: 125px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerContainerInterno{
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    width: 1165px;
+    margin: auto;
+}
+
+.marca{
+    display: flex;
+}
+
+.universidade{
+    display: flex;
+    flex-direction: column;
+    font-family: DINProBold;
+    font-size: 21px;
+    font-weight: bold;
+    color:#82008F ;
+    border-right: solid 4px #82008F;
+    padding-right: 5px;
+    align-items: flex-end;
+}
+
+.raizen{
+    width: 80px;  
+}
+
+.logoBranca{
+    margin-left: 10px;
+    width: 150px ;
+}
+
+.notificacao{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.perfilMenu{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+    width: 241px;
+}
+
+.nomeDisHeader{
+    color: #4A4A4A;
+    font-family: DINProBold;
+    font-size: 16px;
+
+}
+.setaBaixo{
+    width: 16px;
+    margin-left: 15px;
+}
+
+.setaBaixo:hover{
+    cursor: pointer;
+    color: #E21683;
+}
+
+.alerta{
+    display:flex;
+    flex-direction: row;
+}
+
+.quantidade{
+    background-color: #E21683;
+    color: white;
+    border-radius: 80px;
+    font-size: 15px;
+    height:20px;
+    width: 20px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.imgSino{
+    height: 30px;
+}
+
+/*----------------MENU------------------- */
+.menu{
+    display: none;
+    position: absolute;
+    top: 125px;
+    right: 190px;
+    width: 241px;
+    height: 219px;
+    background-color: #ffffff;
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+.menu img{
+    width: 14px;
+    height: 15px;
+    margin-right: 21.1px;
+}
+
+.sair, .inicio, .irAgenda, .proximosEncontros{
+    display: flex;
+    flex-direction: row;
+    padding-left: 31.4px;
+    border-bottom: solid 1px rgb(112, 112, 112, 0.11);
+    height: 56px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.sair:hover, .inicio:hover, .irAgenda:hover, .proximosEncontros:hover{
+    cursor: pointer;
+    color:#E21683;
+} 
+
+.proximosEncontros div{
+    padding-right: 20px;
+    flex-wrap: wrap;
+    text-align: start;
+}
+
+/* -------------BOX DO CORPO--------------- */
+.container{
+    width: 100%;
+    display: flex;
+    background-color: #F1F1F1;
+}
+
+.containerAlinhamento{
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerBody{
+    display: flex;
+    flex-direction: column;
+    background-color: #F1F1F1;
+    height:100%;
+    margin:0;
+    align-items: center;
+}
+
+.containerEncontros{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    width: 100%;
+}
+
+.encontros{
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo{
+    margin-bottom: 20px;
+}
+
+.tituloProximo{
+    display: flex;
+    background-color: #F1F1F1;
+    color:rgb(74, 74, 74, 0.82);
+    width:100%;
+    height:60px;
+    align-items: center;
+    margin-bottom: 0;
+    padding-left: 10px;
+}
+
+.atual{
+    display:flex;
+    width: 770.61px;
+    height: 266px;
+    background-color: #82008F ;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 49px;
+}
+
+.data{
+    text-align: center;
+    line-height: 1;
+}
+
+.dia{
+    font-family: DINProBold;
+    color:#FC8304;
+    font-size: 100px;
+}
+
+.mes{
+    color:white;
+    font-size: 25px;
+}
+
+.hora{
+    font-family: DINProLight;
+    color:white;
+    font-size: 20px;
+}
+
+.perfilEncontro{
+    display:flex;
+    flex-direction:column;
+    width: 100%;
+    height: 266px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.imagesPerfil{
+    display:flex;
+    align-items: baseline;
+}
+
+.fotoPerfil{
+    width: 80px;
+}
+
+.adicionar{
+    width: 15px;
+}
+
+.nomeDis{
+    color:white;
+    font-family: DINProLight;
+    font-size: 32px;
+}
+
+.sobreNomeDis{
+    font-family: DINProBold;
+    color:white;
+    font-size: 36px;
+}
+
+.areaDis{
+    color:white;
+    font-family: DINProLight;
+    font-size: 15px;
+}
+
+.btnLink{
+    background-color: #1FC2DF;
+    font-family: DINProBold;
+    color: white;
+    font-size: 14px;
+    width: 228px;
+    height: 42px;
+    border: none;
+    margin-top: 70px;
+}
+
+.antigos{
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    color: #4A4A4A;
+    overflow-y: scroll;
+}
+
+.dadosAntigos{
+    display: flex;
+    margin-bottom: 30.84px;
+}
+
+.dataAntiga{
+    border-right: solid 2px  #6B6B6B ;
+    text-align: center;
+    line-height: 1;
+    padding-right: 10px;
+}
+
+.mesAntigo{
+    font-size: 14px;
+}
+
+.diaAntigo{
+    font-family: DINPro;
+    color:#E21683;
+    font-size: 50px;
+}
+
+.horaAntigo{
+    font-size: 14px;
+}
+
+.perfilEncontroAntigo{
+    flex-direction: column;
+    line-height: 1.5;
+    padding-left: 22.01px;
+}
+
+.nomeTutor{
+    margin-top: 5px;
+}
+
+.nomeDisAntigo{
+    font-family: DINProBold;
+    flex-wrap: wrap;
+    width: 193px;
+}
+
+#avancar{
+    width:25px;
+    margin-left: 10.6px;
+}
+
+/*--------------------CAMPO PESQUISA--------------------*/
+.pesquisa{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 56px;
+}
+
+.duvida{
+    font-size: 22px;
+    color:rgb(74, 74, 74, 0.82);
+}
+
+.pesquisa input{
+    width: 817px;
+    height: 42px;
+    margin-left: 19px;
+    border:none;
+}
+
+.pesquisa input::placeholder{
+    color:#6B6B6B;
+    font-size: 14px;
+    padding-left: 19px;
+}
+
+
+#lupa{
+    width: 20px;
+    margin-left: 9.63px;
+}
+
+/*------------------SELEÇÃO DE DISSEMINADORES-------------------*/
+.tutores{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 52px;
+    height: 783px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    width: 1160px;
+}
+
+.tutor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px #82008F;
+    width: 260px;
+    height: 369px;
+    background-color: white;
+    text-align: center;   
+    margin-bottom: 45px;
+}
+
+.tutor:hover, .btnCarregarMais:hover, .btnTutorAba:hover, .fechar img:hover{
+    cursor: pointer;
+}
+
+.tutorAba{
+    display: none;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    background-color: rgb(134, 50, 119, 0.97);
+    width: 100%;
+    height: 307px;
+    margin-top: -250.5px;
+    padding: 24.82px 34.42px 35px 33.58px;
+}
+
+.nomeTutorAba{
+    font-family: DINProBlack;
+    font-size: 24px;
+    color:rgb(252, 131, 4);
+    margin-bottom: 16px;
+    width: 192px;
+    height: 61px;
+}
+
+.areaTutorAba{
+    font-size: 14px;
+    color: rgb(255, 255, 255, 0.7);
+    width: 170px;
+    height: 53px;
+}
+
+.descricaoTutorAba{
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 14.51px;
+    width: 170px;
+    height: 72px;
+    line-height: 1.5;
+}
+
+.divBtnTutorAba{
+    margin-top: 14.51px;
+}
+
+.btnTutorAba{
+    background-color: #1FC2DF;
+    color: #ffffff;
+    font-family: DINProBold;
+    font-size: 14px;
+    width: 188px;
+    height: 42px;
+    border: none;
+}
+
+.fotoPerfilLista{
+    width: 113px;
+    margin-top: 35px;  
+}
+
+.nomeTutorLista{
+    font-family: DINProBlack;
+    font-size: 22px;
+    color: #82008F ;
+    width: 170px;
+    margin-top: 16.82px;
+    line-height: 1.2;
+}
+
+.areaTutorLista{
+    color: #4A4A4A;
+    font-size: 14px;
+    width: 170px;
+    margin-top: 16.66px;    
+}
+
+.favoritoTutorLista{
+    width: 19px;
+    height: 17px;
+    margin-top: 8.71px;  
+}
+
+.notaTutorLista{
+    color:#5A1B5A;
+    font-size: 14px;
+    margin-top: 2.69px;  
+}
+
+.btnCarregarMais{
+    width: 284px;
+    height: 50px;
+    margin-top: 69.9px;
+    margin-bottom: 129px;
+    color: white;
+    background-color: #863176;
+    border: none;
+    align-items: center;
+}
+
+/*--------------------RODAPÉ---------------------*/
+footer{
+    display: flex;
+    background-color: #5A1B5A;
+    border: solid 3px #82008F;
+    color:rgb(255, 249, 249, 0.8);
+    font-size: 12px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+    height: 227px;
+    justify-content: flex-end;
+    align-items:flex-end;
+}
+
+/*--------ABA PARA MARCAR CONSULTA - FICA OCULTA---------*/
+
+.containerAgenda{
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1170px;
+    height: 850px;
+    background-color:#F1F1F1;
+    border:solid 1px #707070;
+    align-items: center;
+}
+
+.fechar img{
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    top: 30px;
+}
+
+.fechar{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 33.9px;
+}
+
+.fechar img{
+    width: 21px;
+    height: 21px;
+}
+
+.containerCentral{
+    margin:auto;
+    margin-top: 50px;
+    width: 1010px;
+    height: 600px;
+}
+
+.containerInfo{
+    display: flex;
+    width: 1010px;
+    height: 700px;
+}
+
+.tituloAgenda{
+    left: 0;
+    font-family: DINProBold;
+    font-size: 26px; 
+}
+
+.perfil{
+    display: flex;
+    flex-direction: column; 
+    padding-top: 46px;
+    align-items: center;
+    margin-right: 41px;
+}
+
+.perfil img{
+    width: 32px;
+    height: 34px;
+    margin-bottom: 29.27px;
+}
+
+#fotoAgenda{
+    width: 126px;
+    height: 126px;
+    margin-bottom: 48px;
+}
+
+.conecte{
+    margin-bottom: 13.5px;
+}
+
+.containerInfo{
+    display:flex;  
+}
+
+.avaliacao{
+    margin-left: 10px;
+}
+
+.descricao{
+    width: 377px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 46px;
+}
+
+.idAgenda{
+    display: flex;
+    align-items: flex-end;
+}
+
+.nomeId{
+    font-family: DINProLight;
+    font-size: 32px;
+    color: #5A1B5A;
+}
+
+.sobreNomeId{
+    font-family: DINProBlack;
+    font-size: 44px;
+    color: #5A1B5A;
+}
+
+.areaAgenda{
+    width: 100%;
+    font-size: 14px;
+    color: #82008F;
+    margin-top: 5px;
+}
+
+.agenda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 362px;
+    margin-left: 103px;
+}
+
+.minhaAgenda img{
+    width: 362px;
+    height: 359px;
+    margin-bottom: 33.5px;
+}
+
+.diaHora{
+    display: flex;
+    flex-direction: column;
+    width: 362px;
+    height: 220px;
+    background-color: #ffffff;
+    padding-left: 33px;
+    padding-top: 24px;
+    margin-bottom: 42.39px;
+}
+
+.selecaoDia{
+    font-family: DINProMedium;
+    font-size: 36px;
+    color: #82008F;
+    margin-bottom: 5.5px;
+}
+
+.tituloHorario{
+    font-family: DINProLight;
+    font-size: 16px;
+    color:#6B6B6B;
+    margin-bottom: 24.5px;
+}
+
+.horarios{
+    display: flex;
+    width: 300px;
+    height: 70px ;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.horarios::-webkit-scrollbar{
+    width: 6px;
+}
+  
+.horarios::-webkit-scrollbar-track{
+    background: #E8E8E8;
+}
+  
+.horarios::-webkit-scrollbar-thumb{
+    background-color: #82008F;
+    border-radius: 21px;
+}
+
+.horaAg{
+    display: flex;
+    background-color: #82008F;
+    color: #ffffff;
+    font-family: DINProLight;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    width: 131px;
+    height: 30px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.campoBtnAgendar{
+    width: 100%;
+    margin-bottom: 24.5px;
+}
+
+#btnAgendar{
+    background-color: #1FC2DF;
+    color: #ffffff;
+    font-family: DINProBold;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+    height: 50px;
+}
+
+.agendado{
+    color: #4A4A4A;
+    font-size: 16px;
+    text-align: center;
+}
+
+.active{
+    display: block;
+}
+
+/*-------------------SCROLL------------------*/
+.tutores::-webkit-scrollbar{
+    width: 6px; 
+}
+  
+.tutores::-webkit-scrollbar-track{
+    background: #E8E8E8; 
+}
+  
+.tutores::-webkit-scrollbar-thumb{
+    background-color: #82008F;
+    border-radius: 21px;
+}
+
+.antigos::-webkit-scrollbar{
+    width: 6px; 
+}
+  
+.antigos::-webkit-scrollbar-track{
+    background: #E8E8E8; 
+}
+  
+.antigos::-webkit-scrollbar-thumb{
+    background-color: #82008F;
+    border-radius: 21px;
+}
+
+/*=============================================Tablet Landscape==============================================*/
+@media only screen and (min-width:769px) and  (max-width: 1112px){
+    body{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 0;
+    }
+    
+    .headerContainerInterno{
+        display: flex;
+        width: 80%;
+        height: 80px;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+    }
+    
+    /*-----------------MENU----------------------- */
+
+    .menu{
+        right: 15px;
+    }
+    
+    /* ------------- BOX DO CORPO --------------- */
+
+    .container{
+        width: 100%;
+        display: flex;
+        background-color: #F1F1F1;
+    }
+    
+    .containerAlinhamento{
+        margin:auto;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        align-items: center;
+    }
+    
+    .containerBody{
+        display: flex;
+        flex-direction: column;
+        background-color: #F1F1F1;
+        height:100%;
+        margin:0;
+        width: 80%;
+    }
+    
+    .containerEncontros{
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 10px;
+    }
+    
+    .encontros{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .tituloProximo{
+        width:80%;
+        height:60px;
+    }
+    
+    .dadosAntigos{ 
+        width: 100%;
+    }
+
+    .dadosAntigos div:nth-of-type(1){
+        flex-grow: 1;
+    }
+
+    .dadosAntigos div:nth-of-type(2){
+        flex-grow: 3;
+    }
+
+    .dadosAntigos div:nth-of-type(3){
+        flex-grow: 0;
+    }
+
+    .antigos{
+        display: flex;
+        margin-top: 20px;
+        margin-left: 0;
+        padding-right: 25px; 
+    }
+    
+    .dataAntiga{
+        display: flex;
+        margin-right: 30px;
+        align-items: center;
+    }
+    
+    .mesAntigo{
+        font-size: 20px;
+        margin-right: 15px;
+    }
+    
+    .diaAntigo{
+        font-family: DINPro;
+        color:#E21683;
+        font-size: 50px;
+        margin-right: 15px;
+    }
+    
+    .horaAntigo{
+        margin-right: 15px;
+        font-size: 20px;
+    }
+    
+    .perfilEncontroAntigo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align:start;
+        padding-left: 0;
+        justify-content: start;
+    }
+    
+    .nomeTutor{
+        margin-top: 0;
+        font-size: 20px;
+        width: 80%;
+    }
+    
+    .nomeDisAntigo{
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    #avancar{
+        margin-left: 40px;
+    }
+    
+    /*-----------------------CAMPO PESQUISA-----------------------*/
+
+    .pesquisa{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 56px;
+    }
+    
+    .duvida{
+        font-size: 25px;
+        color:rgb(74, 74, 74, 0.82);
+    }
+    
+    #lupa{
+        width: 25px;
+        margin-left: 0px;
+    }
+    
+    /*-----------------------SELEÇÃO DE DISSEMINADORES-----------------------*/
+    .tutores{
+        width: 105%;
+    }
+    
+    .tutor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: solid 1px #82008F;
+        width: 260px;
+        height: 369px;
+        background-color: white;
+        text-align: center;   
+        margin-bottom: 45px;
+    }
+   
+    /*-----------------------ABA PARA MARCAR CONSULTA - FICA OCULTA-----------------------*/
+    
+    .containerAgenda{
+        width: 90%;
+    }
+}
+
+/*=============================================Tablet Portrait=============================================*/
+@media only screen and (min-width: 416px) and (max-width:768px){
+    body{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 0;
+    }
+    
+    
+    .headerContainerInterno{
+        display: flex;
+        width: 80%;
+        height: 80px;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+    }
+    
+    /*-----------------MENU----------------------- */
+
+    .menu{
+        right: auto;
+    }
+    
+    /* ------------- BOX DO CORPO --------------- */
+
+    .container{
+        width: 100%;
+        display: flex;
+        background-color: #F1F1F1;
+    }
+    
+    .atual{
+        width: 100%;
+    }
+
+    .containerAlinhamento{
+        margin:auto;
+        width: 95%;
+        align-items: center;
+    }
+    
+    .containerBody{
+        display: flex;
+        flex-direction: column;
+        background-color: #F1F1F1;
+        height:100%;
+        margin:0;
+        width: 80%;
+    }
+    
+    .encontros{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%
+    }
+    
+    .tituloProximo{
+        width:80%;
+        height:60px;
+    }
+    
+    .dadosAntigos div:nth-of-type(1){
+        flex-grow: 1;
+    }
+
+    .dadosAntigos div:nth-of-type(2){
+        flex-grow: 3;
+    }
+
+    .dadosAntigos div:nth-of-type(3){
+        flex-grow: 0;
+    }
+
+    .antigos{
+        display: flex;
+        margin-top: 20px;
+        margin-left: 0;
+        padding-right: 25px; 
+    }
+    
+    .dataAntiga{
+        display: flex;
+        margin-right: 30px;
+        align-items: center;
+    }
+    
+    .mesAntigo{
+        font-size: 30px;
+        margin-right: 15px;
+    }
+    
+    .diaAntigo{
+        font-family: DINPro;
+        color:#E21683;
+        font-size: 50px;
+        margin-right: 15px;
+    }
+    
+    .horaAntigo{
+        margin-right: 15px;
+        font-size: 30px;
+    }
+    
+    .perfilEncontroAntigo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align:start;
+        padding-left: 0;
+        justify-content: start;
+    }
+    
+    .nomeTutor{
+        margin-top: 0;
+        font-size: 20px;
+        width: 80%;
+    }
+    
+    .nomeDisAntigo{
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    #avancar{
+        margin-left: 40px;
+    }
+    
+    /*-----------------------CAMPO PESQUISA-----------------------*/
+    
+    #lupa{
+        width: 30px;
+        margin-left: 0px;
+    }
+    
+    /*-----------------------SELEÇÃO DE DISSEMINADORES-----------------------*/
+    .tutores{
+        width: 100%;
+        margin-right: 15px;
+    }
+   
+    /*-----------------------ABA PARA MARCAR CONSULTA - FICA OCULTA-----------------------*/
+    
+    .containerAgenda{
+        width: 90%;
+    }
+}
+
+/*==============================================Smartphone=================================================*/
+@media only screen and (max-width:415px){
+    body{
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .headerContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    
+    .headerContainerInterno{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    
+    .marca{
+        display: flex;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    
+    .universidade{
+        display: flex;
+        flex-direction: column;
+        font-family: DINProBold;
+        font-size: 21px;
+        font-weight: bold;
+        color:#82008F ;
+        border-right: solid 4px #82008F;
+        padding-right: 5px;
+        align-items:center;
+    }
+    
+    .raizen{
+        width: 80px;  
+    }
+    
+    .logoBranca{
+        margin-left: 10px;
+        width: 150px ;
+    }
+    
+    .notificacao{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        text-align: center;
+        justify-content:space-between;
+        align-items: center;
+    }
+    
+    .perfilMenu{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 16px;
+        width: 100%;
+    }
+    
+    .nomeDisHeader{
+        color: #4A4A4A;
+        font-family: DINProBold;
+        font-size: 16px;
+    
+    }
+    .setaBaixo{
+        width: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .alerta{
+        display:flex;
+        flex-direction: row;
+    }
+    
+    .quantidade{
+        background-color: #E21683;
+        color: white;
+        border-radius: 80px;
+        font-size: 15px;
+        height:20px;
+        width: 20px;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 30px;
+    }
+    
+    .imgSino{
+        margin-left: 20px;
+        height: 30px;
+    }
+    
+    /*-----------------MENU----------------------- */
+    .menu{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        top: 120px;
+        right: 5px;
+        width: 100%;
+        height: 219px;
+        background-color: #ffffff;
+    }
+    
+    .menu a{
+        text-decoration: none;
+    }
+    
+    .menu img{
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+    }
+    
+    .sair, .inicio, .irAgenda, .proximosEncontros{
+        display: flex;
+        flex-direction: row;
+        border-bottom: solid 1px rgb(112, 112, 112, 0.11);
+        height: 56px;
+        align-items: center;
+        font-size: 14px;
+    }
+    
+    .proximosEncontros div{
+        padding-right: 20px;
+        flex-wrap: wrap;
+        text-align: start;
+    }
+    
+    /* ------------- BOX CENTRAL --------------- */
+    .container{
+        width: 100%;
+        display: flex;
+        background-color: #F1F1F1;
+    }
+    
+    .containerAlinhamento{
+        max-width: 400px;
+        width: 100%;
+        margin:auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .containerBody{
+        display: flex;
+        flex-direction: column;
+        background-color: #F1F1F1;
+        height:100%;
+        width: 100%;
+        margin:0;
+        align-items: center;
+    }
+    
+    .containerEncontros{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0px 10px;
+        width: 100%;
+    }
+    
+    .encontros{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .titulo{
+        font-size: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .tituloProximo{
+        display: flex;
+        background-color: #F1F1F1;
+        color:rgb(74, 74, 74, 0.82);
+        width:100%;
+        height:100%;
+        align-items: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding-left: 5px;
+        font-size: 20px;
+    }
+    
+    .atual{
+        display:flex;
+        flex-direction: column;
+        max-width: 400px;
+        width: 100%;
+        height: 100%;
+        background-color: #82008F ;
+        align-items: center;
+        padding: 0px;
+    }
+    
+    .data{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        line-height: 1;
+    }
+    
+    .dia{
+        font-family: DINProBold;
+        color:#FC8304;
+        font-size: 100px;
+    }
+    
+    .mes{
+        color:white;
+        font-size: 30px;
+    }
+    .hora{
+        display: flex;
+        background-color: #82008F;
+        color: #ffffff;
+        font-family: DINProLight;
+        font-size: 30px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    
+    .perfilEncontro{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        width: 100%;
+        height: 266px;
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+    
+    .imagesPerfil{
+        display:flex;
+        align-items: baseline;
+    }
+    
+    .fotoPerfil{
+        width: 200px;
+    }
+    
+    .adicionar{
+        width: 15px;
+    }
+    
+    .nomeDis{
+        color:white;
+        font-family: DINProLight;
+        font-size: 32px;
+    }
+    
+    .sobreNomeDis{
+        font-family: DINProBold;
+        color:white;
+        font-size: 36px;
+    }
+    
+    .areaDis{
+        color:white;
+        font-family: DINProLight;
+        font-size: 15px;
+    }
+    
+    .btnLink{
+        background-color: #1FC2DF;
+        font-family: DINProBold;
+        color: white;
+        font-size: 14px;
+        width: 228px;
+        height: 42px;
+        border: none;
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+    
+    .antigos{
+        background-color: none;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+        color: #4A4A4A;
+        overflow-y: scroll;
+    }
+    
+    .dadosAntigos{
+        display: flex;
+        margin-bottom: 10px;
+    }
+    
+    .dataAntiga{
+        border-right: solid 2px  #6B6B6B ;
+        text-align: center;
+        line-height: 1;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .mesAntigo{
+        font-size: 20px;
+    }
+    
+    .diaAntigo{
+        font-family: DINPro;
+        color:#E21683;
+        font-size: 50px;
+    }
+    
+    .horaAntigo{
+        font-size: 20px;
+    }
+    
+    .perfilEncontroAntigo{
+        flex-direction: column;
+        line-height: 1.5;
+        padding-left: 22.01px;
+    }
+    
+    .nomeTutor{
+        margin-top: 5px;
+    }
+    
+    .nomeDisAntigo{
+        font-family: DINProBold;
+        flex-wrap: wrap;
+        width: 193px;
+    }
+    
+    #avancar{
+        width:25px;
+        margin-left: 10.6px;
+    }
+    
+    /*-----------------------CAMPO PESQUISA-----------------------*/
+    .pesquisa{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 56px;
+        flex-wrap: wrap;
+    }
+    
+    .duvida{
+        font-size: 30px;
+        color:rgb(74, 74, 74, 0.82);
+    }
+    
+    .pesquisa input{
+        width: 90%;
+        height: 42px;
+        margin: auto;
+        border:none;
+    }
+    
+    .pesquisa input::placeholder{
+        color:#6B6B6B;
+        font-size: 14px;
+        padding-left: 19px;
+    }
+    
+    #lupa{
+        width: 20px;
+        margin-left: 9.63px;
+    }
+    
+    /*-----------------------SELEÇÃO DE DISSEMINADORES-----------------------*/
+    .tutores{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 52px;
+        height: 500px;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        width: 100%;
+    }
+    
+    .tutor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: solid 1px #82008F;
+        width: 260px;
+        height: 369px;
+        background-color: white;
+        text-align: center;   
+        margin-bottom: 45px;
+    }
+    
+    .tutorAba{
+        display: none;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        background-color: rgb(134, 50, 119, 0.97);
+        width: 100%;
+        height: 307px;
+        margin-top: -250.5px;
+        padding: 24.82px 34.42px 35px 33.58px;
+    }
+    
+    .nomeTutorAba{
+        font-family: DINProBlack;
+        font-size: 24px;
+        color:rgb(252, 131, 4);
+        margin-bottom: 16px;
+        width: 192px;
+        height: 61px;
+    }
+    
+    .areaTutorAba{
+        font-size: 14px;
+        color: rgb(255, 255, 255, 0.7);
+        width: 170px;
+        height: 53px;
+    }
+    
+    .descricaoTutorAba{
+        font-size: 14px;
+        color: #ffffff;
+        margin-bottom: 14.51px;
+        width: 170px;
+        height: 72px;
+        line-height: 1.5;
+    }
+    
+    .divBtnTutorAba{
+        margin-top: 14.51px;
+    }
+    
+    .btnTutorAba{
+        background-color: #1FC2DF;
+        color: #ffffff;
+        font-family: DINProBold;
+        font-size: 14px;
+        width: 188px;
+        height: 42px;
+        border: none;
+    }
+    
+    .fotoPerfilLista{
+        width: 113px;
+        margin-top: 35px;  
+    }
+    
+    .nomeTutorLista{
+        font-family: DINProBlack;
+        font-size: 22px;
+        color: #82008F ;
+        width: 170px;
+        margin-top: 16.82px;
+        line-height: 1.2;
+    }
+    
+    .areaTutorLista{
+        color: #4A4A4A;
+        font-size: 14px;
+        width: 170px;
+        margin-top: 16.66px;    
+    }
+    
+    .favoritoTutorLista{
+        width: 19px;
+        height: 17px;
+        margin-top: 8.71px;  
+    }
+    
+    .notaTutorLista{
+        color:#5A1B5A;
+        font-size: 14px;
+        margin-top: 2.69px;  
+    }
+    
+    .btnCarregarMais{
+        width: 284px;
+        height: 50px;
+        margin-top: 69.9px;
+        margin-bottom: 129px;
+        color: white;
+        background-color: #863176;
+        border: none;
+        align-items: center;
+    }
+    
+    /*-----------------------RODAPÉ-----------------------*/
+    footer{
+        width: 100%;
+        display: flex;
+        background-color: #5A1B5A;
+        border: solid 1px #82008F;
+        color: rgb(255, 249, 249, 0.8);
+        font-size: 12px;
+        padding-right: 20px;
+        padding-bottom: 0px;
+        justify-content:flex-end;
+        align-items: center;
+        height: 50px;  
+    }
+    
+    /*-----------------------ABA PARA MARCAR CONSULTA - FICA OCULTA-----------------------*/
+    
+    .containerAgenda{
+        display: none;
+        flex-direction: column;
+        position:relative;
+        left:auto;
+        top: auto;
+        transform:none;
+        width: 100%;
+        height: 100%;
+        background-color: #F1F1F1;
+        border: solid 1px #707070;
+        align-items: center;
+    }
+    
+    .fechar img{
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        top: 0;
+    }
+    
+    .fechar{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+        margin-left: 90%;
+    }
+    
+    .fechar img{
+        width: 21px;
+        height: 21px;
+    }
+    
+    .containerCentral{
+        display: flex;
+        flex-direction: column;
+        margin:auto;
+        margin-top: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+    
+    .containerInfo{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .tituloAgenda{
+        left: 0;
+        font-family: DINProBold;
+        font-size: 26px; 
+    }
+    
+    .perfil{
+        display: flex;
+        flex-direction: row; 
+        padding-top: 0px;
+        align-items: center;
+        margin-right: 0px;
+    }
+    
+    .perfil img{
+        width: 32px;
+        height: 34px;
+        margin-bottom: 10px;
+    }
+    
+    #fotoAgenda{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0;
+    }
+    
+    .conecte{
+        margin-bottom: 13.5px;
+    }
+    
+    
+    .avaliacao{
+        margin-left: 10px;
+    }
+    
+    .descricao{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 46px;
+    }
+    
+    .idAgenda{
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .nomeId{
+        font-family: DINProLight;
+        font-size: 32px;
+        color: #5A1B5A;
+    }
+    
+    .sobreNomeId{
+        font-family: DINProBlack;
+        font-size: 44px;
+        color: #5A1B5A;
+    }
+    
+    .areaAgenda{
+        width: 100%;
+        font-size: 14px;
+        color: #82008F;
+        margin-top: 5px;
+    }
+    
+    .agenda{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .minhaAgenda img{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 33.5px;
+    }
+    
+    .diaHora{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        padding-left: 0;
+        padding-top: 24px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        align-items: center
+    }
+    
+    .selecaoDia{
+        font-family: DINProMedium;
+        font-size: 36px;
+        color: #82008F;
+        margin-bottom: 5.5px;
+    }
+    
+    .tituloHorario{
+        font-family: DINProLight;
+        font-size: 16px;
+        color:#6B6B6B;
+        margin-bottom: 24.5px;
+    }
+    
+    .horarios{
+        display: flex;
+        width: 80%;
+        height: 50px ;
+        flex-wrap: wrap;
+        overflow: auto;
+    }
+
+    .horaAg{
+        display: flex;
+        background-color: #82008F;
+        color: #ffffff;
+        font-family: DINProLight;
+        font-size: 16px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 30px;
+        margin-left: 20px;
+        margin-bottom: 5px;
+    }
+    
+    .horarios::-webkit-scrollbar{
+        width: 6px;
+    }
+      
+    .horarios::-webkit-scrollbar-track{
+        background: #E8E8E8;
+    }
+      
+    .horarios::-webkit-scrollbar-thumb{
+        background-color: #82008F;
+        border-radius: 21px;
+    }
+    
+    .campoBtnAgendar{
+        width: 100%;
+        margin-bottom: 24.5px;
+    }
+    
+    #btnAgendar{
+        background-color: #1FC2DF;
+        color: #ffffff;
+        font-family: DINProBold;
+        font-size: 16px;
+        border: none;
+        width: 100%;
+        height: 50px;
+    }
+    
+    .agendado{
+        color: #4A4A4A;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .active{
+        display: flex;
+    }
+    
+    /*-------------------SCROLL------------------*/
+    .tutores::-webkit-scrollbar{
+        width: 6px; 
+    }
+      
+    .tutores::-webkit-scrollbar-track{
+        background: #E8E8E8; 
+    }
+      
+    .tutores::-webkit-scrollbar-thumb{
+        background-color: #82008F;
+        border-radius: 21px;
+    }
+    
+    .antigos::-webkit-scrollbar{
+        width: 6px; 
+    }
+      
+    .antigos::-webkit-scrollbar-track{
+        background: #E8E8E8; 
+    }
+      
+    .antigos::-webkit-scrollbar-thumb{
+        background-color: #82008F;
+        border-radius: 21px;
+    }
+}
